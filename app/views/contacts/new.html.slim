@@ -1,0 +1,15 @@
+h1 contact
+= form_with(model: @contact, local: true) do |f|
+  - @contact.errors.full_messages.each do |message|
+    li = message
+  p
+  = f.label :name
+  = f.text_field :name
+  p
+  = f.label :email
+  = f.email_field :email
+  p
+  = f.label :message
+  = f.text_area :message
+  p
+  = f.submit
